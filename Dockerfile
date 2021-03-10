@@ -7,7 +7,7 @@ ARG VCS_REF
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/nikos/python3-alpine-flask-docker"
+      org.label-schema.vcs-url="https://github.com/RavinduSachintha/fa-python"
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
