@@ -17,9 +17,12 @@ app.permanent_session_lifetime =  timedelta(hours=1)
 def handle_exception(e):
 	return p.response(0, str(e))
 	
+@app.route('/', methods = ['GET'])
+def index():
+	return p.response(1, "Woke UP !!!")
 
 @app.route('/api/fa', methods = ['GET'])
-def index():
+def api_index():
 	if 'ip' not in session:
 		return p.response(0, "You are not logged")
 	return p.response(1, "Logged in as " + session['ip'])
