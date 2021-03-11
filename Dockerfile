@@ -1,6 +1,6 @@
 FROM python:3.8-alpine
 
-MAINTAINER Ravindu Sachintha
+LABEL maintainer="Ravindu Sachintha"
 
 ARG BUILD_DATE
 ARG VCS_REF

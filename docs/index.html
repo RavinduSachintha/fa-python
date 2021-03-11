@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- meta info -->
-		<meta charset="UTF-8">
-		
-		<!-- page title -->
-		<title>FA-python</title>
-		
-		<!-- linked styles -->
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-		
-		<!-- linked scripts -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script src="main.js"></script>
-	</head>
-	<body>
-		<h1>Finite Automaton with Python and Flask</h1>
-	</body>
+  <head>
+    <!-- meta info -->
+    <meta charset="UTF-8" />
+
+    <!-- page title -->
+    <title>FA-python</title>
+
+    <!-- linked styles -->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- linked scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </head>
+  <body class="bg-smoke-white">
+    <div class="container-fluid fill">
+      <!-- sleep state indicate -->
+      <div id="sleep-indicator">
+        <div class="row py-5"></div>
+        <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 text-right">
+                <img
+                  id="sleep-img"
+                  class="w-75 border border-white rounded-circle shadow-lg bg-danger mr-3"
+                  src="assets/sleep.svg"
+                  alt="sleep image by Coquet Adrien"
+                />
+              </div>
+              <div class="col-md-6 my-auto">
+                <h1 class="display-3">Seems like server sleeps 😴</h1>
+                <br />
+                <h1 class="display-5">Wait a moment...</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row fixed-bottom">
+          <p class="mx-auto text-secondary">
+            Image by Coquet Adrien
+            <a href="https://iconscout.com/icons/sleep" target="_blank"
+              >Sleep Icon</a
+            >
+            on <a href="https://iconscout.com">Iconscout</a>
+          </p>
+        </div>
+      </div>
+
+      <div id="main-content">Main Content</div>
+    </div>
+
+    <!-- <div id="state-indic" class="container bg-smoke-white">
+			<div class="container" id="sleep-img">
+				<img class="img-m" src="assets/sleep.svg" alt="sleep image by Coquet Adrien" />
+			</div>
+		</div>
+		<div id="state-indicator" hidden>
+			Sleep
+		</div>
+		<div hidden>
+			
+		</div> -->
+  </body>
 </html>
