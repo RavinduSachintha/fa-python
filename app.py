@@ -3,14 +3,16 @@ import json
 import program as p
 
 from flask import Flask, request, session, redirect, url_for
-
+from flask_cors import CORS, cross_origin
 from werkzeug.exceptions import HTTPException
-
 from datetime import timedelta
 
 app = Flask(__name__)
 app.secret_key = "fa-python-rs"
 app.permanent_session_lifetime =  timedelta(hours=1)
+
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.errorhandler(Exception)
@@ -18,10 +20,12 @@ def handle_exception(e):
 	return p.response(0, str(e))
 	
 @app.route('/', methods = ['GET'])
+@cross_origin()
 def index():
 	return p.response(1, "Woke UP !!!")
 
 @app.route('/api/fa', methods = ['GET'])
+@cross_origin()
 def api_index():
 	if 'ip' not in session:
 		return p.response(0, "You are not logged")
@@ -29,6 +33,7 @@ def api_index():
 	
 
 @app.route('/api/fa/init', methods = ['GET'])
+@cross_origin()
 def session_init():
 	session['ip'] = request.remote_addr
 	session['model'] = None
@@ -37,6 +42,7 @@ def session_init():
 	
 	
 @app.route('/api/fa/destroy', methods = ['GET'])
+@cross_origin()
 def session_destroy():
 	if 'ip' not in session:
 		return p.response(0, "You are not logged")
@@ -46,6 +52,7 @@ def session_destroy():
 	
 
 @app.route('/api/fa/dfa/setup', methods=['POST'])
+@cross_origin()
 def dfa_setup():
 	if 'ip' not in session:
 		return p.response(0, "You are not logged")
@@ -56,6 +63,7 @@ def dfa_setup():
 	
 	
 @app.route('/api/fa/dfa/exec', methods=['POST'])
+@cross_origin()
 def dfa_exec():
 	if 'ip' not in session:
 		return p.response(0, "You are not logged")
