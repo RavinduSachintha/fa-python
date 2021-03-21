@@ -1,4 +1,5 @@
 @import url(../fonts/caladea.css);
+@import url(../fonts/courgette.css);
 @import url(jquery-ui.css);
 @import url(bootstrap.min.css);
 
@@ -28,4 +29,14 @@ body {
 
 .bg-purple {
   background-color: #ac4fc6;
+}
+
+.logo-text {
+  font-family: "Courgette", sans-serif;
+  text-shadow: 3px 3px 5px white, 1px 1px black;
+  color: #ac4fc6;
+}
+
+div.logo {
+  background-color: #a4a4a4;
 }

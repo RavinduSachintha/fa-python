@@ -17,6 +17,10 @@ var app = {
   state: "000000", // initial app state
 };
 
+/*
+... App basics related methods
+*/
+
 // sleep method for app
 async function sleep(duration) {
   await new Promise((done) => setTimeout(() => done(), duration));
@@ -48,6 +52,26 @@ async function serverWakeUp() {
     }
   }
 }
+
+/*
+... Tool bar component
+*/
+
+/*
+... Action bar component
+*/
+
+/*
+... Canvas component
+*/
+
+/*
+... Display component
+*/
+
+/*
+... App lifecycle
+*/
 
 (async function lifeCycle() {
   switch (app.state) {
